@@ -14,6 +14,7 @@
                 <th scope="col">type</th>
                 <th scope="col">artists</th>
                 <th scope="col">writers</th>
+                <th scope="col">Azioni</th>
 
             </tr>
         </thead>
@@ -40,6 +41,10 @@
                         @foreach (json_decode($comic->writers) as $writer)
                             {{ $writer }},
                         @endforeach
+                    </td>
+
+                    <td>
+                        <a href="{{route('comics.show', $comic->id)}}" class="btn btn-success "><i class="fa-solid fa-eye"></i></a>
                     </td>
 
 
