@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>Home</h1>
+<h1>Ci sono esattamente {{$num_cards}} Card</h1>
 
 @endsection
