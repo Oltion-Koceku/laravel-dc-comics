@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <table class="table">
+    <table class="table container">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -22,7 +22,7 @@
                 <tr>
                     <td>{{ $comic->id }}</td>
                     <td>{{ $comic->title }}</td>
-                    <td><img class="w-75" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
+                    <td><img class="w-100" src="{{ $comic->thumb }}" alt="{{ $comic->title }}"></td>
                     <td>{{ $comic->description }}</td>
                     <td>&euro;{{ $comic->price }}</td>
                     <td>{{ $comic->series }}</td>
