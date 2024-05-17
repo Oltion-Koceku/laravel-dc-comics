@@ -33,13 +33,13 @@
                     <td>
                         {{-- li ho ricodificati in array cosi posso ciclarli, perche nei seeder li avevo trasformati in strighe --}}
                         @foreach (json_decode($comic->artists) as $artist)
-                            {{ $artist }},
+                            <li>{{ $artist }}</li>
                         @endforeach
                     </td>
 
                     <td>
                         @foreach (json_decode($comic->writers) as $writer)
-                            {{ $writer }},
+                            <li>{{ $writer }}</li>
                         @endforeach
                     </td>
 
