@@ -63,9 +63,13 @@ class ComicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        //
+
+        $data = $comic;
+        // dd($data->description);
+
+        return view('Comics.edit', compact('data'));
     }
 
     /**
@@ -73,7 +77,7 @@ class ComicsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
     }
 
     /**

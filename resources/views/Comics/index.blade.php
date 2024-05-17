@@ -43,8 +43,9 @@
                         @endforeach
                     </td>
 
-                    <td>
+                    <td class="d-flex">
                         <a href="{{route('comics.show', $comic->id)}}" class="btn btn-success "><i class="fa-solid fa-eye"></i></a>
+                        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger "><i class="fa-solid fa-pencil"></i></a>
                     </td>
 
 
