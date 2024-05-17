@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <form action="{{route('comics.index')}}" method="POST" class="container">
+    <form action="{{route('comics.update', $data->id)}}" method="POST" class="container">
         @csrf
         @method('PUT')
         <div class="mb-3">
