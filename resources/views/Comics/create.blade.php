@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <form action="{{route('comics.store')}}" method="POST" class="container">
+    <form action="{{route('comics.store')}}" method="POST" class="container create">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
@@ -48,6 +48,6 @@
             <input name="writers[]" type="text" class="form-control" id="writers">
         </div>
 
-        <button type="submit" class="btn btn-primary">Invia</button>
+        <button type="submit" class="btn btn-primary p-4 ">Invia</button>
     </form>
 @endsection
