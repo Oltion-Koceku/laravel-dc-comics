@@ -28,14 +28,17 @@ class ComicReaquest extends FormRequest
             'series'=>'max:50',
             'sale_date'=>'required',
             'type'=>'required|min:3|max:50',
-            'artists'=>'required',
-            'writers'=>'required'
+            // visto che salvo i dati gia in array bisogna stampare la stringa
+            'artists' => 'required|array',
+            'artists.*' => 'required|string',
+            'writers' => 'required|array',
+            'writers.*' => 'required|string'
         ];
     }
 
-    public function message(){
+    public function messages(): array{
 
-        [
+        return [
 
             'title.required'=>'Il titolo è obbligatorio',
             'title.min'=>'Il titolo non può avere meno di :min caratteri',
@@ -51,8 +54,10 @@ class ComicReaquest extends FormRequest
             'type.required'=>'Il type è obbligatorio',
             'type.min'=>'Il type non può avere meno di :min caratteri',
             'type.max'=>'Il type non puo superare :max caratteri',
-            'artists.required'=>'Il artists è obbligatorio',
-            'writers.required'=>'Il writers è obbligatorio',
+            'artists.*.required' => 'il campo Artisti è obbligatorio',
+            'artists.*.string' => 'il campo Artisti deve essere una stringa',
+            'writers.*.required' => 'il campo Scrittori è obbligatorio',
+            'writers.*.string' => 'il campo Scrittori deve essere una stringa',
 
         ];
 
