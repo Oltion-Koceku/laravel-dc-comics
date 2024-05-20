@@ -29,9 +29,9 @@ class ComicReaquest extends FormRequest
             'sale_date'=>'required',
             'type'=>'required|min:3|max:50',
             // visto che salvo i dati gia in array bisogna stampare la stringa
-            'artists' => 'required|array',
+            // 'artists' => 'required|array',
             'artists.*' => 'required|string',
-            'writers' => 'required|array',
+            // 'writers' => 'required|array',
             'writers.*' => 'required|string'
         ];
     }
@@ -54,9 +54,7 @@ class ComicReaquest extends FormRequest
             'type.min'=>'Il type non può avere meno di :min caratteri',
             'type.max'=>'Il type non puo superare :max caratteri',
             'artists.*.required' => 'il campo Artisti è obbligatorio',
-            'artists.*.string' => 'il campo Artisti deve essere una stringa',
             'writers.*.required' => 'il campo Scrittori è obbligatorio',
-            'writers.*.string' => 'il campo Scrittori deve essere una stringa',
 
         ];
 
