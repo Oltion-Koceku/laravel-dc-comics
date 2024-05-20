@@ -46,7 +46,7 @@
                     <td class="d-flex">
                         <a href="{{route('comics.show', $comic->id)}}" class="btn btn-success "><i class="fa-solid fa-eye -3 "></i></a>
                         <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger "><i class="fa-solid fa-pencil"></i></a>
-                        <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="container">
+                        <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="container" onsubmit="return confirm('sei sicuro di voler cancellare {{$comic->title}} ')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-trash"></i></button>

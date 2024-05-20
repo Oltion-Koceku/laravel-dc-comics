@@ -11,6 +11,7 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
+
     <title>Template</title>
 </head>
 <body>
