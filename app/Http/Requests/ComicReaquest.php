@@ -23,7 +23,7 @@ class ComicReaquest extends FormRequest
     {
         return [
             'title'=>'required|min:3|max:100',
-            'thumb'=>'required|min:10|max:255',
+            'thumb'=>'required|min:10',
             'price'=>'required|min:1|max:6',
             'series'=>'max:50',
             'sale_date'=>'required',
@@ -45,7 +45,6 @@ class ComicReaquest extends FormRequest
             'title.max'=>'Il tiolo non puo superare :max caratteri',
             'thumb.required'=>'Il thumb è obbligatorio',
             'thumb.min'=>'Il thumb non può avere meno di :min caratteri',
-            'thumb.max'=>'Il thumb non puo superare :max caratteri',
             'price.required'=>'Il price è obbligatorio',
             'price.min'=>'Il price non può avere meno di :min caratteri',
             'price.max'=>'Il price non puo superare :max caratteri',
